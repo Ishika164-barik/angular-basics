@@ -1,10 +1,11 @@
 import { getLocaleEraNames } from '@angular/common';
 import { LocationUpgradeModule } from '@angular/common/upgrade';
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,FormsModule],// formsModule use for two way databinding in ngmodel
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
@@ -34,4 +35,16 @@ captureData(){
   console.log("you enter somr cherector");
   
 }
+
+//ngmodel
+
+customerLocation="India"
+ customerLocationChange (customerName: any){
+this.customerLocation= customerName;
+  
+}
+// customerLocationChange ($event : any){
+//   console.log($event);
+  
+// }
 }

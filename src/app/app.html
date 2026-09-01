@@ -9,3 +9,8 @@
 
 <button (click)="btnClick()">Submit</button>
 <input type="text" [placeholder]="placeHolderMessage" (keyup)="captureData()">
+
+<!-- ngmodel -->
+ <hr>
+ <input type="text" [ngModel]="customerLocation" (ngModelChange)="customerLocationChange($event)" >
+<p>{{customerLocation}}</p>
