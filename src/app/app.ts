@@ -11,4 +11,8 @@ export class App {
   protected readonly title = signal('my-app');
 
   projectName = "ANGULAR"
+
+  getNumber(a:number,b:number){
+    return a+b;
+  }
 }
