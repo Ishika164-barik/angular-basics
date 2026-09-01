@@ -1,16 +1,12 @@
-<h1>{{ title() }} - {{projectName}}</h1>
-<h2>{{20+30}}</h2>
-<p>{{"ishika"+" "+"barik"}}</p>
-<h2>{{getCustumerName()}}</h2>
-
-<input type="text" value="Admin">
-<input type="text" [value]="custumerRole">
- <textarea name="textarea" [value] = "message"></textarea> <!--bydefault it will tok two line -->
-
-<button (click)="btnClick()">Submit</button>
-<input type="text" [placeholder]="placeHolderMessage" (keyup)="captureData()">
-
-<!-- ngmodel -->
- <hr>
- <input type="text" [ngModel]="customerLocation" (ngModelChange)="customerLocationChange($event)" >
-<p>{{customerLocation}}</p>
+<h1>ngStyle Directive</h1>
+<div style="background-color: greenyellow;">Green1 color</div>
+<br>
+<hr>
+<div [ngStyle]="{'background-color': divBGColor, 'color': divColor}">Green2 color</div>
+<br><br>
+<span class="success">Employee got hick</span>
+<br><br>
+<!-- <div [ngClass]="divClassSuccess">ngStyle Employ got hick</div> -->
+  <div [ngClass]="isSuccess == true ? divClassSuccess : divClassFailuer "> ngStyle Employ got hick</div>
+  <br><br>
+  <h1 *ngIf="isStudentPass== 'pass'">I am pass</h1> /we can hide it by using ngIf but we can not remove it from dom just like display:none

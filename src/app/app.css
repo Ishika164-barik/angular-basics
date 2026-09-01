@@ -1,0 +1,10 @@
+.success{
+    background-color: blueviolet;
+    font-size: xx-large;
+    color: yellow;
+}
+.failuer{
+    background-color:orangered;
+    font-size: xx-large;
+    color: yellow;
+}
