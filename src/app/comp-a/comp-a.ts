@@ -6,4 +6,19 @@ import { Component } from '@angular/core';
   styleUrl: './comp-a.css',
   templateUrl: './comp-a.html',
 })
-export class CompA {}
+export class CompA {
+    // $event 
+
+  eventHandle(event : any){
+    console.log(event.target.value);
+    
+  }
+
+handleEvent(eventName:string){
+  console.log(eventName);
+  
+}
+//Disable
+btnDisable= false;
+inputReadonly=false;
+}

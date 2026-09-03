@@ -1,1 +1,26 @@
  <!-- (ng generate component componentName) or(ng g c componentName) in terminal -->
+  <!-- $event -->
+ <input type="text" (input)="eventHandle($event)">   <!-- it will show what ever you click in keybord in inspect-->
+  <br><hr>
+   <input type="text" (input)="handleEvent($event.type)"> <!--it will show only input when you enter some thing in inspect -->
+   <br><hr>
+ <input type="text" (change)="handleEvent($event.type)">   <!--it will count change when ever you write some thing and click out side box in inspect -->
+    <br><hr>
+ <button type="text" (click)="handleEvent($event.type)">click</button>
+<select name="" (change)="handleEvent($event.type)" id="">   <!-- it will show change when ever you click on options -->
+    <option value="">car</option>
+    <option value="">bick</option>
+    <option value="">mobile</option>
+ </select>
+   <br><hr>
+   <input type="text" (blur)="handleEvent($event.type)"> <!-- when ever you click inside side and agai clic outside the box it will show blur basicaly click outside box-->
+     <br><hr>
+   <input type="text" (focus)="handleEvent($event.type)">    <!-- when ever you click out side and agai clic inside the box it will show focus basicaly click inside box-->
+   <br><br>
+   <!-- disabled -->
+    <button disabled="{{btnDisable}}">    click</button>
+    <button [disabled]="btnDisable">    click</button>
+    <!-- readOnly -->
+     <br><br>
+     <input type="text" readonly="{{inputReadonly}}">
+          <input type="text" [readonly]="inputReadonly">
