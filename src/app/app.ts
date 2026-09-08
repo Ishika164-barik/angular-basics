@@ -19,7 +19,7 @@ export class App {
   getCustumerName(){
     return "Ishika";
   }
-//property data binding []  one way data binding (comonent ---> view)
+//property data binding []  one way data binding (component ---> view)
 
 custumerRole ="Admin";
 
