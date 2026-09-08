@@ -36,7 +36,7 @@ captureData(){
   
 }
 
-//ngmodel
+//ngmodel use for 2 way data binding
 
 customerLocation="India"
  customerLocationChange (customerName: any){
