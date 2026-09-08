@@ -1,7 +1,7 @@
 import { getLocaleEraNames } from '@angular/common';
 import { LocationUpgradeModule } from '@angular/common/upgrade';
 import { Component, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // FormsModule must be imported in ng module
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -36,7 +36,8 @@ captureData(){
   
 }
 
-//ngmodel (use for 2 way data binding)
+//ngmodel (use for 2 way data binding) (FormsModule must be imported in @component for using ng module) 
+  //syntax:- [(ngModule)]  this is called banana in a box
 
 customerLocation="India"
  customerLocationChange (customerName: any){
