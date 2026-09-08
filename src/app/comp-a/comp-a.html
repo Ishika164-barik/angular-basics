@@ -1,10 +1,10 @@
  <!-- (ng generate component componentName) or(ng g c componentName) in terminal -->
   <!-- $event -->
- <input type="text" (input)="eventHandle($event)">   <!-- it will show what ever you click in keybord in inspect-->
+ <input type="text" (input)="eventHandle($event)">   <!-- it will show what ever you click in keybord view in inspect-->
   <br><hr>
-   <input type="text" (input)="handleEvent($event.type)"> <!--it will show only input when you enter some thing in inspect -->
+   <input type="text" (input)="handleEvent($event.type)"> <!--it will show only input when you enter some thing view in inspect -->
    <br><hr>
- <input type="text" (change)="handleEvent($event.type)">   <!--it will count change when ever you write some thing and click out side box in inspect -->
+ <input type="text" (change)="handleEvent($event.type)">   <!--it will count change when ever you write some thing and click out side box  view in inspect -->
     <br><hr>
  <button type="text" (click)="handleEvent($event.type)">click</button>
 <select name="" (change)="handleEvent($event.type)" id="">   <!-- it will show change when ever you click on options -->
@@ -24,3 +24,16 @@
      <br><br>
      <input type="text" readonly="{{inputReadonly}}">
           <input type="text" [readonly]="inputReadonly">
+<!-- signal -->
+ <h1>SIGNAL</h1>
+ <h1>{{data}}</h1>
+ <button type="text" (click)="updateData()">update data</button>
+<h1>{{count()}}</h1>
+  <button type="text" (click)="updateCount()">update count</button>
+  <br><br>
+  <!-- computed sugnal -->
+  <h1>Computed signal</h1>
+<h2>AREA : {{area()}}</h2>
+<h2>HEIGHT : {{height()}}</h2>
+<button (click)="CompSignalVal()">Update</button>
+
