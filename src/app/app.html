@@ -1,1 +1,80 @@
-<h1>ngStyle Directive</h1>
+<!-- ngFor (ngFor ka use kisi array/list ke elements ko repeat karke HTML me display karne ke liye hota hai) -->
+
+<ul>
+ <li *ngFor="let std of Student"> {{std}}</li>     
+</ul>
+
+<ul>
+  <li *ngFor="let emp of Employees">
+    <strong>{{emp.name}}</strong>
+    <strong>   {{emp.age}}</strong>
+  <strong>   {{emp.id}}</strong></li>
+</ul>
+<!-- ngSwitch ngSwitchCase ngSwitchDefault -->
+
+<div style="margin: 30px;" [ngSwitch]="customerId">
+  <div *ngSwitchCase="101"><P>"Aliza"</P></div>
+  <div *ngSwitchCase="102"><P>"Rohit"</P></div>
+  <div *ngSwitchCase="103"><P>"Srabani"</P></div>
+  <div *ngSwitchCase="101"><P>"ziba"</P></div>
+  <div *ngSwitchDefault><P>"Not Avelable"</P></div>
+</div>
+
+<!-- Insted of *ngStyle and *ng class you can use new syntax -->
+ <div [style.background-color]="bgColSafe == true ? 'green' : 'red' ">{{message}}</div>
+<div [style.background-color]="iSEmployeeGetHike == true ? 'yellow' : 'pink' "  [class.success]="iSEmployeeGetHike == true"    [class.failure]="iSEmployeeGetHike != true"> Employee </div>
+<!-- Angular cotrol flow -->
+<!-- @if  @else if @else -->
+<hr>
+<div style="margin: 20px;">
+@if(myBtechCGPA >=9.0 ){
+  <p>you are having around "O" grade</p>
+}
+@else if(myBtechCGPA >=8.0 && myBtechCGPA <=8.9){
+  <p>you are having around "E" grade</p>
+}
+@else if(myBtechCGPA >=7.0 && myBtechCGPA <=7.9){
+  <p>you are having around "A" grade</p>
+}
+@else if(myBtechCGPA >=7.0 && myBtechCGPA <=7.9){
+  <p>you are having around "B" grade</p>
+}
+@else if(myBtechCGPA >=6.0 && myBtechCGPA <=6.9){
+  <p>you are having around "c" grade</p>
+}
+@else {
+  <p>you are having around "F" grade</p>
+}
+</div>
+
+<!-- @for  (track :- in Angular @for, it tells Angular which item is unique so Angular can efficiently update the DOM.) -->
+ <!-- Why do we use track?
+
+Suppose the list changes:
+
+Before:
+Subhi
+Ruhi
+DC
+Sorav
+
+After:
+Subhi
+Ruhi
+DC
+Jagruti
+
+With track, Angular can understand that only Sorav was replaced by Jagruti, rather than unnecessarily recreating the whole list. -->
+
+<!-- old *ngIf + else (Old syntax mein else ke liye "ng-template" use karna padta tha) -->
+
+<div *ngIf="isLoggedIn; else loginMessage">
+  Welcome!
+</div>
+
+ <ng-template #loginMessage> <!--Is ng-template ko loginMessage naam de do, taaki Angular ise reference kar sake-->
+  Please Login
+</ng-template>
+
+<!-- Agar isLoggedIn = false:
+Please Login -->
